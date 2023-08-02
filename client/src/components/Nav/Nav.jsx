@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import SearchBar from '../SearchBar/SearchBar'
 import { LogoLogout } from '../../svg/Logos'
+import { MenuHamburguer } from '../../svg/Logos'
 import './Nav.css'
 
 export default function Nav() {

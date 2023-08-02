@@ -1,0 +1,26 @@
+.Container__Error404{
+    height: 83.9vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 5rem;
+    gap: 3rem;
+}
+
+.H2_404{
+    font-size: 3rem;
+    color: var(--Oscuro);
+}
+
+.Button__404{
+    background-color: var(--Oscuro);
+    padding: 1rem 2rem;
+    border: none;
+    color: var(--white);
+    border-radius: .8rem;
+    cursor: pointer;
+}
+
+.Button__404:hover{
+    background-color: rgb(32, 32, 32);
+}

@@ -33,6 +33,7 @@
     border-radius: .3rem;
     background-color: var(--grey);
     cursor: pointer;
+    font-family: 'Inter', sans-serif;
 }
 
 .Button__Reset{
@@ -49,4 +50,25 @@
 .Button__Reset:hover{
     background-color: var(--white);
     color:var(--Black)
+}
+
+@media screen and (max-width:500px) {
+    .Container__Filtered{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        width: 90%;
+        height: 40vh;
+        max-width: 25rem;
+    }
+
+    .Filters__Cont{
+        width: 5rem;
+        font-size: .7rem;
+    }
+
+    .Container__select{
+        width: 5rem;
+    }
 }

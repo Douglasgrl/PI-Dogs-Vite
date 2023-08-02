@@ -1,6 +1,4 @@
 import React from 'react'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
 import "./SearchBar.css"
 import { useDispatch } from 'react-redux'
@@ -27,7 +25,6 @@ export default function SearchBar() {
         <input className='Input__Search' value={name} onChange={handleChange} type="search" placeholder='Enter your name' />
 
       <button className="button__search" onClick={add}><p>Search</p>
-      <FontAwesomeIcon icon={faMagnifyingGlass}/>
       </button>
 
     </div>

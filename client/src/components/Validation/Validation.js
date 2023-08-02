@@ -32,6 +32,9 @@ const validation = (dogsData)=>{
 
     if(!regexLife.test(dogsData.life_span)) errors.life_span = "Debe ser un numero"
 
+
+    if(dogsData.temperament.length === 0) errors.temperament = "Debe seleccionar por lo menos 1 temperamento"
+    
     return errors
 }
 

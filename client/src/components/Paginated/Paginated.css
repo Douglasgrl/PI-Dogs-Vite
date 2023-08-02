@@ -15,6 +15,10 @@
     cursor: pointer;
 }
 
+.Logo__Pag{
+    fill: var(--white);
+}
+
 .container__paginated button:hover{
     background-color: rgb(21, 21, 34);
 }

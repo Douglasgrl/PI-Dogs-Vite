@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Create.css";
 import { useState } from "react";
 import "../Validation/Validation";
@@ -12,8 +12,6 @@ export default function Create() {
   const navigate = useNavigate()
 
   const temperaments = useSelector((state) => state.temperaments);
-
-  const [selectTemp, setSelectTemp] = useState([]);
 
   const dispatch = useDispatch();
 
@@ -45,14 +43,14 @@ export default function Create() {
       ...dogsData,
       [event.target.name]: event.target.value,
     });
-
-    setErrors(
-      validation({
-        ...dogsData,
-        [event.target.name]: event.target.value,
-      })
-    );
   };
+
+  useEffect(()=>{
+    const errosValidation = validation(dogsData)
+    setErrors(
+      errosValidation
+    )
+  },[dogsData])
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -85,8 +83,7 @@ export default function Create() {
   const handleTemps = (event) => {
     const select = event.target.value;
 
-    if (!selectTemp.includes(select)) {
-      setSelectTemp((prevSelectTemp) => [...prevSelectTemp, select]);
+    if (!dogsData.temperament.includes(select)) {
       setDogsData((prevDogsData) => ({
         ...prevDogsData,
         temperament: [...prevDogsData.temperament, select],
@@ -95,13 +92,13 @@ export default function Create() {
   };
 
   const handleRemoveTemp = (tempToRemove) => {
-    const updatedSelectTemp = selectTemp.filter(
+    const updatedSelectTemp = dogsData.temperament.filter(
       (temp) => temp !== tempToRemove
     );
-    setSelectTemp(updatedSelectTemp);
+    setDogsData({...dogsData, temperament: updatedSelectTemp});
   };
 
-  const hasErrors = Object.values(errors).some((error) => error !== "");
+  // const hasErrors = Object.values(errors).some((error) => error !== "");
 
   return (
     <div className="Container__Create">
@@ -209,7 +206,7 @@ export default function Create() {
             {Array.isArray(temperaments) &&
               temperaments?.map((temperament, index) => {
                 return (
-                  <option value={temperament} key={index}>
+                  <option value={temperament} key={index} >
                     {temperament}
                   </option>
                 );
@@ -217,22 +214,24 @@ export default function Create() {
           </select>
 
           <div className="cls">
-          {selectTemp.map((selectedTemp, index) => (
-            <div key={index} className="SelectedTemp__Container">
-              <button className="SelectedTemp__RemoveButton" onClick={() => handleRemoveTemp(selectedTemp)}>x</button>
+          {dogsData.temperament.map((selectedTemp, index) => (
+            <div key={index} className="SelectedTemp__Container" >
+              <button type="button" className="SelectedTemp__RemoveButton" onClick={() => handleRemoveTemp(selectedTemp)}>x</button>
               <p className="SelectedTemp__Text">{selectedTemp}</p>
             </div>
-
 ))}
+
+          {errors.temperament && <p>{errors.temperament}</p>}
+          
             </div>
 
 
-          {errors.temperament && <p>{errors.temperament}</p>}
         </label>
 
-        {!hasErrors && (
-          <input className="Form__submit" type="submit" value="Submit" />
-        )}
+        {Object.keys(errors).length === 0 ? <input className="Form__submit" type="submit" value="Submit" /> : null
+          
+          
+        }
       </form>
     </div>
   );

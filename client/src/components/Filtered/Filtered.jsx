@@ -37,9 +37,9 @@ export default function Filtered() {
     <div className="Filters__Cont">
       <h3>Origins</h3>
     <select className="Container__select" name="Origin" onChange={handleOrigin}>
-          <option value="">ALL</option>
-          <option value="API">API</option>
-          <option value="DB">DB</option>
+          <option value="">All</option>
+          <option value="API">Api</option>
+          <option value="DB">Db</option>
         </select>
     </div>
 

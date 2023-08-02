@@ -32,8 +32,8 @@ export default function Detail() {
           <br />
           <h3>Weight: {onSearchById.weight} Pounds</h3>
           <h3 className="Detail__Temp" >Temperaments : <p>{onSearchById.temperament}</p></h3>
-          <h3>Height: {onSearchById.height}</h3>
-          <h3>Life Span: {onSearchById.life_span} Years Life</h3>
+          <h3>Height: {onSearchById.height} Inches</h3>
+          <h3>Life Span: {onSearchById.life_span}</h3>
         </div>
 
           <Link to={"/home"}><button className="Detail__Button"><LogoShare className="Logo_Share"/></button>

@@ -31,3 +31,10 @@
     fill: var(--white);
     font-size: .9rem;
 }
+
+@media screen and (max-width:500px) {
+    .Container__Nav{
+        flex-direction: column;
+        height: 20rem;
+    }
+}

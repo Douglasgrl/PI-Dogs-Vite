@@ -10,6 +10,7 @@
     border: none;
     border-radius: .5rem;
     width: 15rem;
+    font-family: 'Inter', sans-serif;
 }
 
 .button__search{
@@ -26,6 +27,7 @@
     border: 1px solid var(--white);
     font-size: .9rem;
     cursor: pointer;
+    font-family: 'Inter', sans-serif;
 }
 
 .button__search:hover{
