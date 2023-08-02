@@ -41,7 +41,7 @@ export const onSearchId = (id) => {
         payload: data,
       });
     } catch (error) {
-      alert(`eror : ${error}`);
+      alert(`Lo sentimos pero no tenemos ese perro`);
     }
   };
 };
@@ -55,7 +55,7 @@ export const onSearchName = (name) => {
         payload: data,
       });
     } catch (error) {
-      alert(`Lo sentimos pero no tenemos ninguna coincidencia`);
+      alert(`Sorry but we don't have any matches`);
     }
   };
 };
@@ -83,7 +83,7 @@ export const createDog = (dog) => {
         payload: data,
       });
     } catch (error) {
-      alert(`${error.message}`);
+      alert(`Lo sentimos pero el perro, ya se encuentra en la base de datos`);
     }
   };
 };
