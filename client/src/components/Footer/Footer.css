@@ -1,0 +1,38 @@
+.Footer{
+    background: var(--Oscuro);
+    height: 70px;
+    display: flex;
+    align-items: center;
+    color:var(--white);
+    font-size: 1rem;
+    justify-content: space-between;
+    padding: 0 3rem;
+    border-top: 4px solid var(--Inter);
+}
+
+.Footer__Logos{
+    display: flex;
+    gap: 2rem;
+    font-size: 1.4rem;
+}
+
+.Footer__Link{
+    border: 1px solid var(--white);
+    padding: .5rem .7rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Logo__Footer{
+    fill: var(--white);
+}
+
+.Footer__Link:hover {
+    background-color: var(--white);
+}
+
+.Footer__Link:hover .Logo__Footer {
+    fill: var(--Oscuro);
+}

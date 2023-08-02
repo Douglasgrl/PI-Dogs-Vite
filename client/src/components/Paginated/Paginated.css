@@ -1,0 +1,20 @@
+.container__paginated{
+    display: flex;
+    justify-content: center;
+    padding: 1.03rem;
+    font-size: 1.3rem;
+    align-items: center;
+    gap: .8rem;
+}
+
+.container__paginated button{
+    font-size: 1rem;
+    background: var(--Oscuro);
+    color: var(--white);
+    padding: .5rem;
+    cursor: pointer;
+}
+
+.container__paginated button:hover{
+    background-color: rgb(21, 21, 34);
+}

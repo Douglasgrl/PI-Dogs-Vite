@@ -1,0 +1,19 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root{
+  --white: #F8F8F8;
+  --grey: #F4F6F0;
+  --Inter: #898989;
+  --Oscuro: #2B2B2B;
+  --Red : rgb(202, 10, 10);
+  --Black : #212121;
+}
+
+body{
+  width: 100%;
+  height: 100vh;
+}

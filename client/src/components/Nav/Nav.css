@@ -1,0 +1,33 @@
+.Container__Nav{
+    background-color: var(--Oscuro);
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 2rem;
+    gap: 2rem;
+    border-bottom: 4px solid var(--Inter);
+}
+
+.Nav__Link{
+    text-decoration: none;
+    color: #Fff;
+}
+
+.Button__Logout{
+    background-color: var(--Red);
+    padding: .4rem 1.5rem;
+    border: none;
+    border-radius: .5rem;
+    color: var(--white);   
+    cursor: pointer;
+}
+
+.Button__Logout:hover{
+    background-color: rgb(169, 5, 5);
+}
+
+.Logo__Logout{
+    fill: var(--white);
+    font-size: .9rem;
+}

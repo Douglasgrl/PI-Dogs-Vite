@@ -1,0 +1,66 @@
+.Container__Detail{
+    height: 83.9vh;
+    background-color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.Detail__img{
+    width: 40%;
+    height: 30rem;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.Detail__Card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    background-color: var(--Oscuro);
+    height: 80%;
+    width: 80%;
+    border: 5px solid var(--Inter);
+    position: relative;
+}
+
+.Detail__text{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    color: var(--white);
+    font-size: 1.3rem;
+    gap: 1rem;
+}
+
+.Detail__Temp{
+    width: 70%;
+}
+
+.Detail__Button{
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    padding: .5rem 1.4rem;
+    background-color: var(--Red);
+    cursor: pointer;
+    border: none;
+    border-radius: .5rem;
+    color: var(--white);
+    display: flex;
+    gap: .5rem;
+}
+
+.Detail__Button:hover{
+    background-color: rgb(169, 5, 5);
+}
+
+.Logo__Share{
+    fill: var(--white);
+    font-size: .9rem;
+}

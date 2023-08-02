@@ -1,0 +1,19 @@
+.Container{
+    min-height: 83.9vh;
+    display: flex;
+    flex-direction: column;
+    background-color:var(--grey);
+}
+
+.Container__Cards{
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+}
+
+.Cards__Cont{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}

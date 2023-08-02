@@ -1,0 +1,34 @@
+.Container__Search{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.Input__Search{
+    padding: .3rem .8rem;
+    margin: 0;
+    border: none;
+    border-radius: .5rem;
+    width: 15rem;
+}
+
+.button__search{
+    padding: .2rem .5rem;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: .5rem;
+    align-items: center;
+    background-color: var(--Black);
+    color: var(--white);
+    padding: .4rem 1.6rem;
+    border-radius: .4rem;
+    border: none;
+    border: 1px solid var(--white);
+    font-size: .9rem;
+    cursor: pointer;
+}
+
+.button__search:hover{
+    background-color: var(--white);
+    color:var(--Black)
+}

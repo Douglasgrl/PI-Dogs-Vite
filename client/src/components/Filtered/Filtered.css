@@ -1,0 +1,52 @@
+.Container__Filtered{
+    background: var(--Oscuro);
+    height: 65vh;
+    width: 30%;
+    margin: 0 0 0rem 1rem;
+    margin-top: .7rem;
+    border-radius: 1rem;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 3px solid var(--Inter);
+}
+
+
+.Filters__Cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    color: var(--white);
+    background-color: var(--Black);
+    padding: .6rem 3.5rem;
+    width: 10rem;
+    border-radius: .4rem;
+    border: 2px solid var(--white);
+}
+
+.Container__select{
+    width: 7rem;
+    text-align: center;
+    border-radius: .3rem;
+    background-color: var(--grey);
+    cursor: pointer;
+}
+
+.Button__Reset{
+    padding: .5rem 2rem;
+    border-radius: .4rem;
+    border: none;
+    cursor: pointer;
+    background-color: var(--Black);
+    color: var(--white);
+    font-size: 1rem;
+    border: 2px solid var(--white);
+}
+
+.Button__Reset:hover{
+    background-color: var(--white);
+    color:var(--Black)
+}
