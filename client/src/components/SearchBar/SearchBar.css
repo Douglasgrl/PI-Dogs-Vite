@@ -34,3 +34,20 @@
     background-color: var(--white);
     color:var(--Black)
 }
+
+@media screen and (max-width:600px) {
+
+    .Container__Search{
+        gap: .5rem;
+    }
+
+    .Input__Search{
+        width: 10rem;
+    }
+
+    .button__search{
+        width: 5rem;
+        align-items: center;
+        justify-content: center;
+    }
+}

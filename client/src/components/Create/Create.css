@@ -8,7 +8,6 @@
 }
 
 .Create__Img{
-    background-color: red;
     width: 40%;
     height: 38rem;
     object-fit: cover;
@@ -22,7 +21,7 @@
 .Form__Create{
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: .8rem;
     width: 40%;
     height: 38rem;
     background-color: var(--Oscuro);
@@ -68,4 +67,22 @@
     border-radius: .5rem;
     border: none;
     cursor: pointer;
+}
+
+@media screen and (max-width:600px) {
+    .Container__Create{
+        flex-direction: column;
+        height: 100%;
+        padding: 2rem 0;
+    }
+
+    .Create__Img{
+        width: 85%;
+        height: 60%;
+    }
+
+    .Form__Create{
+        height: 100%;
+        width: 85%;
+    }
 }

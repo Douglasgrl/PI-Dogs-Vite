@@ -60,6 +60,10 @@
     padding-bottom: 1.5rem;
 }
 
+.back p{
+    font-size: .9rem;
+}
+
 .Container_Card:hover .front{
     transform: perspective(600px) rotateY(180deg);
 }

@@ -25,7 +25,7 @@ export default function Paginated({ pageNumber, cantPage }) {
           </>
         )}
         <h3>{pageNumber}</h3>
-        {pageNumber >= cantPage ? (
+        {pageNumber > cantPage ? (
           <>
             <button onClick={() => dispatch(next())} disabled>
               <NextRight className="Logo__Pag"/>

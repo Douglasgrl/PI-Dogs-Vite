@@ -3,15 +3,52 @@
     height: 3.5rem;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 0 2rem;
-    gap: 2rem;
+    gap: 1.5rem;
     border-bottom: 4px solid var(--Inter);
 }
 
 .Nav__Link{
     text-decoration: none;
     color: #Fff;
+}
+
+.Container__Navigate{
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Container__Menu{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.Nav__Cont{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+}
+
+.Nav__Li{
+    list-style: none;
+}
+
+.Nav__Li--Logout{
+    display: none;
+}
+
+.Button__Hamburguer{
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: none;
+    border: none;
 }
 
 .Button__Logout{
@@ -21,6 +58,7 @@
     border-radius: .5rem;
     color: var(--white);   
     cursor: pointer;
+    margin-right: 4rem;
 }
 
 .Button__Logout:hover{
@@ -32,9 +70,76 @@
     font-size: .9rem;
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width:600px) {
     .Container__Nav{
         flex-direction: column;
-        height: 20rem;
+        height: 4.5rem;
+        position: relative;
+        padding: 0;
     }
+
+    .Button__Hamburguer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        fill: var(--white);
+        text-decoration: none;
+        background-color:  transparent;
+        z-index: 1;
+    }
+
+    .Container__Menu{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        height: 0vh;
+        opacity: 0; 
+        transition: all .5s ease;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .Container__Menu.isActive{
+        width: 100%;
+        height: 200vh;
+        opacity: 1;
+        background-color: var(--Oscuro);
+        z-index: 1;
+    }
+
+    .DivS{
+        display: flex;
+        gap: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .Container__Navigate{
+        width: 80%;
+        height: 20%;
+        gap: 3rem;
+        flex-direction: column;
+        padding-top: 2.5rem;
+    }
+
+    .Nav__Cont{
+        gap: 5rem;
+        padding-top: 35rem;
+        flex-direction: column;
+        font-size: 1.2rem;
+    }
+
+    .Nav__Li{
+        margin: .5rem 0;
+    }
+
+    .Nav__Li--Logout{
+        display: flex;
+    }
+
+    .Button__Logout{
+        display: none;
+    }
+
+
 }

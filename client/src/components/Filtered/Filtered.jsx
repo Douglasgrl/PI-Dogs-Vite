@@ -18,9 +18,9 @@ export default function Filtered() {
     dispatch(filterAz(event.target.value));
   };
 
-  const handleOrigin = (event) =>{
-    dispatch(filterOrigins(event.target.value))
-  }
+  const handleOrigin = (event) => {
+    dispatch(filterOrigins(event.target.value));
+  };
 
   const handleFilterTemp = (event) => {
     dispatch(filterTemperaments(event.target.value));
@@ -30,23 +30,30 @@ export default function Filtered() {
     dispatch(filterWeight(event.target.value));
   };
 
-
   return (
     <div className="Container__Filtered">
-
-    <div className="Filters__Cont">
-      <h3>Origins</h3>
-    <select className="Container__select" name="Origin" onChange={handleOrigin}>
+      <div className="Filters__Cont">
+        <h3>Origins</h3>
+        <select
+          className="Container__select"
+          name="Origin"
+          onChange={handleOrigin}
+        >
+          <option value="Default" disabled selected>
+            (Select Origin)
+          </option>
           <option value="">All</option>
           <option value="API">Api</option>
           <option value="DB">Db</option>
         </select>
-    </div>
-
+      </div>
 
       <div className="Filters__Cont">
         <h3>Alphabetic</h3>
         <select className="Container__select" name="A_Z" onChange={handleAoZ}>
+          <option value="Default" disabled selected>
+            (Select Order)
+          </option>
           <option value="A">A - Z</option>
           <option value="Z">Z - A</option>
         </select>
@@ -59,6 +66,9 @@ export default function Filtered() {
           name="temperaments"
           onChange={handleFilterTemp}
         >
+          <option value="Default" disabled selected>
+            (Select Temperament)
+          </option>
           <option value="Alldogs">All Dogs</option>
           {Array.isArray(temperaments) &&
             temperaments?.map((temperament, index) => {
@@ -78,6 +88,9 @@ export default function Filtered() {
           name="Weight"
           onChange={handleFilterWeight}
         >
+          <option value="Default" disabled selected>
+            (Select Weight)
+          </option>
           <option value="maximum">Maximum</option>
           <option value="minimun">Minimum</option>
         </select>

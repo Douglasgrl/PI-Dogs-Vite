@@ -59,6 +59,7 @@ export default function Create() {
       id: Math.floor(Math.random() * 1000) + 300,
       height: `${dogsData.height1} - ${dogsData.height2}`,
       weight: `${dogsData.weight1} - ${dogsData.weight2}`,
+      life_span : `${dogsData.life_span} years`
     };
 
     dispatch(createDog(finalyData));
@@ -203,6 +204,7 @@ export default function Create() {
         <label className="Form__Label" htmlFor="temperament">
           Temperaments
           <select onChange={handleTemps}>
+            <option value="Default" disabled selected>(Select Temperaments)</option>
             {Array.isArray(temperaments) &&
               temperaments?.map((temperament, index) => {
                 return (

@@ -103,7 +103,7 @@ const reducer = (state = initialState, action) => {
           dogs: action.payload === "maximum"
             ? filterWeight.sort((a, b) => Number(b.weight.split(" - ")[1]) - Number(a.weight.split(" - ")[1]))
             : filterWeight.sort((a, b) => Number(a.weight.split(" - ")[1]) - Number(b.weight.split(" - ")[1])),
-
+            pageNumber: 1,
         };
 
       case RESET:

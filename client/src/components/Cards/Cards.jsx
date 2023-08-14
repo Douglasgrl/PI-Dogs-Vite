@@ -19,8 +19,6 @@ export default function Cards() {
 
   const viewCharacters = dogs?.slice(from, until);
 
-  console.log(viewCharacters)
-
   return (
     <div className="Container">
       <div className="Container__Cards">
